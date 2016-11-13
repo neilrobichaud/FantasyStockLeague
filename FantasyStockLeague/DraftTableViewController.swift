@@ -102,6 +102,7 @@ class DraftTableViewController: UITableViewController {
             you!.stocks.append(tickerList[indexPath.row])
             aiPick()
         if (you!.stocks.count >= stocksPerPerson){
+            
             winAlert()
         }
         }

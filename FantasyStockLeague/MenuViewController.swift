@@ -40,7 +40,9 @@ class MenuViewController: UIViewController {
         }
         else if let showdownController = segue.destinationViewController as? ShowdownViewController{
             showdownController.theirScore = ai.earnings
+            //print(ai.earnings)
             showdownController.yourScore = you.earnings
+            //print(you.earnings)
         }
     }
     

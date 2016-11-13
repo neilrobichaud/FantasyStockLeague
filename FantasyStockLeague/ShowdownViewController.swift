@@ -14,7 +14,7 @@ class ShowdownViewController: UIViewController {
     var winner: String?
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        theirScore = (rand()%2==0) ? yourScore!+1 : yourScore!-3
         // Do any additional setup after loading the view.
     }
 

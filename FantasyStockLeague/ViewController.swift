@@ -19,7 +19,7 @@ class ViewController: UITableViewController, NSXMLParserDelegate {
         }
         symbolString += (you?.stocks[(you?.stocks.count)!-1])!
         }
-        print(symbolString)
+        //print(symbolString)
         getData()
         beginParsing()
         // Do any additional setup after loading the view, typically from a nib.
@@ -99,7 +99,7 @@ class ViewController: UITableViewController, NSXMLParserDelegate {
         else if element.isEqualToString("Close"){
             close+=(string.stringByTrimmingCharactersInSet(
                 NSCharacterSet.whitespaceAndNewlineCharacterSet()))
-            print(close)
+            //print(close)
         }
     }
     func parser(parser: NSXMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?)
@@ -157,10 +157,12 @@ class ViewController: UITableViewController, NSXMLParserDelegate {
         cell.priceLabel?.text = posts[indexPath.row].close
         if firstval{
             lastval = Double(posts[indexPath.row].close)!
+            firstval = false
 
         }
         else{
-            you?.earnings+=Double(posts[indexPath.row].close)! - lastval
+           you!.earnings+=Double(posts[indexPath.row].close)! - lastval
+            
 
             }}
         //print(cell.company.text, cell.dateLabel.text, cell.priceLabel.text)
