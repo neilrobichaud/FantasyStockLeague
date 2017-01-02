@@ -34,7 +34,7 @@ class ViewController: UITableViewController, NSXMLParserDelegate {
     
     func getData(){
         urlComponents.queryItems = [
-            NSURLQueryItem(name: "_Token", value: "BC2B181CF93B441D8C6342120EB0C971"),
+            NSURLQueryItem(name: "_Token", value: ),    //enter value here
             
             NSURLQueryItem(name: "Symbols", value: symbolString),
             NSURLQueryItem(name: "StartDate", value: "2/15/2015"),
